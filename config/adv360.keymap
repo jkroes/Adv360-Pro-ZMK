@@ -86,11 +86,11 @@
 
         macOS {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_COMMAND  &kp LEFT_ALT      &kp LEFT_CONTROL  &kp RIGHT_COMMAND  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans            &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans            &trans            &trans            &trans             &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                                          &trans                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(SPACE))                                                                               &kp LA(LS(LG(LC(L))))  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LA(LC(LG(M))))  &kp LEFT_COMMAND  &kp LEFT_ALT      &kp LEFT_CONTROL  &kp RIGHT_COMMAND  &kp LS(LA(LC(LG(W))))  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                           &trans            &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans                 &trans            &trans            &trans            &trans             &trans                         &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
