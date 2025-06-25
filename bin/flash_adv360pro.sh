@@ -5,7 +5,7 @@ selected_dir=$(find ~/Downloads -maxdepth 1 -type d -name "*firmware-no-clique*"
 
 # Check if we found a directory
 if [ -z "$selected_dir" ]; then
-    osascript -e 'display dialog "No firmware-no-clique directory found" buttons {"OK"} default button "OK"'
+    osascript -e 'display notification "No firmware-no-clique directory found"'
     exit 1
 fi
 
@@ -14,7 +14,7 @@ echo "Selected directory: $selected_dir"
 # Function to wait for drive to appear
 wait_for_drive() {
     local side="$1"
-    osascript -e "display dialog \"Put the ${side} half of the keyboard into bootloader mode and connect it via USB\" buttons {\"OK\"} default button \"OK\"" >/dev/null
+    osascript -e "display notification \"Put the ${side} half of the keyboard into bootloader mode and connect it via USB\"" >/dev/null
     echo "Waiting for ADV360PRO drive to appear..."
     while [ ! -d "/Volumes/ADV360PRO" ]; do
         sleep 1
@@ -73,4 +73,4 @@ if ! copy_with_confirmation "right" "Right"; then
 fi
 
 echo "Firmware flashing process completed!"
-osascript -e 'display dialog "Firmware flashing process completed!\n\nBoth left and right firmware files have been copied." buttons {"OK"} default button "OK"' >/dev/null
+osascript -e 'display notification "Firmware flashing process completed!\n\nBoth left and right firmware files have been copied."' >/dev/null
